@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hearth — Connected Cooking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="scene"></canvas>
+
+    <div id="loader">
+      <div class="spinner"></div>
+      <p>Setting up the kitchen…</p>
+    </div>
+
+    <header class="hud">
+      <div class="brand"><span class="logo">◐</span> Hearth <small>Connected Kitchen</small></div>
+      <div class="clock" id="clock-chip">
+        <span class="lapse">⏩ time-lapse</span>
+        <span id="clock">6:05 PM</span>
+      </div>
+      <a class="app-link hud-app" data-app-link target="_blank" rel="noopener">Open app ↗</a>
+    </header>
+
+    <nav class="dots" id="dots" aria-label="Story steps"></nav>
+
+    <div class="bubble user" id="bubble-user"></div>
+    <div class="bubble speaker" id="bubble-speaker"></div>
+
+    <div class="phone" id="phone" aria-hidden="true">
+      <div class="notch"></div>
+      <div class="screen">
+        <div class="status"><span id="phone-time">6:05</span><span>▂▄▆ 5G ▭</span></div>
+        <div class="notif" id="notif">
+          <div class="notif-icon">◐</div>
+          <div><b></b><p></p></div>
+        </div>
+        <div class="app" id="app"></div>
+      </div>
+    </div>
+
+    <main id="story">
+      <section class="step" data-step="0">
+        <div class="card hero">
+          <span class="kicker">Connected cooking</span>
+          <h1>Dinner, on your schedule.</h1>
+          <p>
+            Meet Alex. It's 6:05 PM, they just got home, and tonight's plan is a medium-rare
+            steak, cooked in a Wi-Fi connected wall oven.
+          </p>
+          <div class="hero-actions">
+            <a class="app-link primary" data-app-link target="_blank" rel="noopener">Dive into the app →</a>
+            <p class="scroll-hint">or scroll to see how it works ↓</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="step" data-step="1">
+        <div class="card">
+          <span class="kicker">01 · Ask Cook AI Assistant</span>
+          <h2>Just say what you're craving</h2>
+          <p>
+            Alex taps the mic and says <b>"Steak, medium rare"</b>. Cook AI Assistant builds a plan,
+            and one tap on <b>Send to Oven</b> sends the mode, temperature and time straight to the wall oven.
+          </p>
+        </div>
+      </section>
+
+      <section class="step" data-step="2">
+        <div class="card">
+          <span class="kicker">02 · Remote preheat</span>
+          <h2>Preheat from anywhere</h2>
+          <p>
+            The oven heats to 135°C while Alex seasons the steaks. The app shows the live temperature and
+            sends a notification when the oven is ready, so nobody has to wait next to it.
+          </p>
+        </div>
+      </section>
+
+      <section class="step" data-step="3">
+        <div class="card">
+          <span class="kicker">03 · Recipe-guided cooking</span>
+          <h2>The settings are already in</h2>
+          <p>
+            Convection Bake, 135°C, 45 minutes are all set. Alex slides the tray in, closes the
+            door and the timer starts on its own.
+          </p>
+        </div>
+      </section>
+
+      <section class="step" data-step="4">
+        <div class="card">
+          <span class="kicker">04 · Voice control</span>
+          <h2>Hands busy? Just ask.</h2>
+          <p>
+            While setting the table, Alex asks the kitchen assistant how the steak is doing, then
+            adds a 5-minute sear for a better crust.
+          </p>
+        </div>
+      </section>
+
+      <section class="step" data-step="5">
+        <div class="card">
+          <span class="kicker">05 · Smart notifications</span>
+          <h2>It tells you when dinner's ready</h2>
+          <p>
+            When the timer ends, Alex's phone and the speaker both announce it, and the oven
+            switches off so the steak rests at a perfect <b>medium rare</b>.
+          </p>
+        </div>
+      </section>
+
+      <section class="step" data-step="6">
+        <div class="card">
+          <span class="kicker">Hearth connected kitchen</span>
+          <h2>Less watching. More living.</h2>
+          <ul class="features">
+            <li><span>📲</span><div><b>Remote preheat</b>Start and monitor the oven from your phone.</div></li>
+            <li><span>📖</span><div><b>Cook AI Assistant</b>Say a dish and get an oven-ready plan.</div></li>
+            <li><span>🗣️</span><div><b>Voice assistant</b>Check progress or add time hands-free.</div></li>
+            <li><span>🔔</span><div><b>Smart alerts</b>Get a notification the moment it hits your doneness.</div></li>
+          </ul>
+          <p class="cta-lead">You've seen the story. Now cook for real.</p>
+          <div class="end-actions">
+            <a class="app-link primary" data-app-link target="_blank" rel="noopener">Let's use it →</a>
+            <button class="replay" id="replay">↺ Replay story</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
